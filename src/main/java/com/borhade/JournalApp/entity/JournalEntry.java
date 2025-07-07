@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class JournalEntry {
     @Id
-    private ObjectId id;
+private ObjectId id;
     @NonNull
     private String title;
     private String content;

@@ -1,0 +1,28 @@
+<configuration>
+    <appender name = "myConsoleAppender" class = "ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yy-MM-dd HH:mm:ss.sss} [%thread] %-5level %logger{36} - %msg %n
+            </pattern>
+        </encoder>
+
+ f   </appender>
+
+
+        <appender name = "myFileAppender" class = "ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder>
+                <pattern>
+                    %d{yy-MM-dd HH:mm:ss.sss} [%thread] %-5level %logger{36} - %msg %n
+                </pattern>
+            </encoder>
+            <file>
+                journalApp.log
+            </file>
+
+        </appender>
+
+    <root level = "INFO">
+        <appender-ref ref = "myConsoleAppender" />
+        <appender-ref ref = "myFileAppender" />
+    </root>
+</configuration>
